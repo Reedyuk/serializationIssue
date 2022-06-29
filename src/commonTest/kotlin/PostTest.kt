@@ -18,6 +18,7 @@ import kotlin.test.assertTrue
 private val jsonFormat = Json {
     serializersModule = SerializersModule {
         polymorphic(A::class, B::class, B.serializer())
+        polymorphic(C::class, D::class, D.serializer())
     }
 }
 
